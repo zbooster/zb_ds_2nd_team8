@@ -1,0 +1,10 @@
+kor	85
+eng	85
+mat	85
+sci	85
+his	85
+kor:	85
+eng:	85
+mat:	85
+sci:	85
+his:	85
