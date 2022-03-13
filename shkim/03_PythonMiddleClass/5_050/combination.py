@@ -3,13 +3,24 @@ def calPermutation(n, r, isPrint=True):
     result = 1
     for i in range(n, n-r, -1):
         result *= i
-        if isPrint:
-            print('n : {}'.format(i))
 
-    print('{}P{}: {}' .format(n, r, result))
     return result
 
-def printPermutation(n, r, selNum=[]):
+def calCombination(n, r, isPrint=True):
+
+    resultP = calPermutation(n, r)
+    resultR = 1
+    for i in range(r, 1, -1):
+        resultR *= i
+    resultC =int(resultP / resultR)
+    if isPrint:
+        print(f'resultP: {resultP}')
+        print(f'resultR: {resultR}')
+        print(f'resultC: {resultC}')
+    return resultC
+
+
+def printCombination(n, r, selNum=[]):
     if r == 0:
         lenList = len(selNum)
         for i in range(lenList):
@@ -24,14 +35,14 @@ def printPermutation(n, r, selNum=[]):
 
     else:
         for i in range(1, 1+n):
-            if selNum.count(i) == 0:
+            if len(selNum) == 0 or i > max(selNum):
                 selNum.append(i)
-                printPermutation(n, r - 1, selNum)
+                printCombination(n, r - 1, selNum)
                 selNum.remove(i)
 
 
-
 if __name__ == '__main__':
-    calPermutation(8, 3)
-    printPermutation(8, 3)
+    calCombination(8, 3)
+    printCombination(8, 3)
+
 
