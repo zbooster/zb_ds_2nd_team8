@@ -8,3 +8,9 @@
 
 myFamilyNames = ('홍아빠', '홍엄마', '홍길동', '홍동생')
 print('myFamilyNames: {}'.format(myFamilyNames))
+
+# nums = list(range(50)) 일 때, nums[:10:-5] 의 결과값을 골라주세요.
+
+nums = list(range(50))
+
+print(nums[:10:-5])
