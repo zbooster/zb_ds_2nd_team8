@@ -1,4 +1,4 @@
-# cars = ['그랜저', '소나타', '말리부', '카니발', '쏘렌토']
+# cars = '그랜저', '소나타', '말리부', '카니발', '쏘렌토'
 #
 # n = 0
 # while n < len(cars):
@@ -21,7 +21,7 @@
 #
 #     if n == len(cars): break
 
-studuntCnts = [[1, 18], [2, 19], [3, 23], [4, 21], [5, 20], [6, 22], [7, 17]]
+studuntCnts = (1, 18), (2, 19), (3, 23), (4, 21), (5, 20), (6, 22), (7, 17)
 
 sum = 0
 
@@ -36,5 +36,3 @@ while n < len(studuntCnts):
 avg = sum / len(studuntCnts)
 print('전체 학생 수: {}명'.format(sum))
 print('평균 학생 수: {}명'.format(avg))
-
-
