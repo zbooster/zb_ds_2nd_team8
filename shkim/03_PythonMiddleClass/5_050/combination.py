@@ -41,8 +41,14 @@ def printCombination(n, r, selNum=[]):
                 selNum.remove(i)
 
 
+from itertools import combinations
+
 if __name__ == '__main__':
+
+
     calCombination(8, 3)
-    printCombination(8, 3)
+    #printCombination(4, 2)
+
+    print(list(combinations(range(3), 2)))
 
 
