@@ -10,7 +10,8 @@ class BookRepository:
         self.books = {}
 
     def registBook(self, b):
-        self.books[b.isbn] = [b.name, b.price]
+        #self.books[b.isbn] = [b.name, b.price]
+        self.books[b.isbn] = b
 
     def removeBook(self, isbn):
         del self.books[isbn]
